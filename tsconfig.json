@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "noEmit": true,
+    "declaration": true,
+    "downlevelIteration": true
+  },
+  "include": ["./book"],
+  "lib": ["es2015","node"],
+  "exclude": ["node_modules"]
+}
