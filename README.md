@@ -2,7 +2,7 @@
 
 ![A Flock. Community Training](.gitbook/assets/image%20%282%29.png)
 
-This training (test) is meant to be given as an interactive workshop that can be finished in an afternoon. Every page ends with an exercise to test if you understand the explained concept. 
+This training (test) a is meant to be given as an interactive workshop that can be finished in an afternoon. Every page ends with an exercise to test if you understand the explained concept. 
 
 You can do those exercises in your own editor.
 
