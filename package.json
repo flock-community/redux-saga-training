@@ -5,17 +5,17 @@
   "author": "Kasper Peulen",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "@types/node": "^12.11.7",
-    "@types/prettier": "^1.18.3",
-    "typescript": "^3.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-typescript": "^7.6.0",
-    "@types/jest": "^24.0.19",
-    "babel-jest": "^24.9.0",
-    "jest": "^24.9.0",
-    "@jest/test-sequencer": "^24.9.0"
+    "prettier": "^1.19.1",
+    "@types/node": "^12.12.14",
+    "@types/prettier": "^1.19.0",
+    "typescript": "^3.7.2",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/jest": "^24.0.23",
+    "babel-jest": "24.9.0",
+    "jest": "24.9.0",
+    "@jest/test-sequencer": "24.9.0"
   },
   "prettier": {
     "bracketSpacing": true,
