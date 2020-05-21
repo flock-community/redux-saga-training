@@ -105,7 +105,33 @@ You could say that the generator function is best suited for producing many thin
 
 However, because the caller of a the generator function decides when to get data out of a generator, it can effectively pause and resume the generator, and decide to schedule those tasks later in time. In this way, it mimics both the functionality of asynchronous function as well as an asynchronous generator function. In fact, you could say that those 2 kind of functions are restricted versions of the generator function. A generator is less easy to use, but allows for more control of the caller of the generator, which can be seen of _inversion of control_. Not the function determines how long the function get paused, or how much data is produced, but the caller is in control of that. 
 
-The library `redux-saga` makes great use of this fact, and allows to produce data \(one or many\) asynchronously as well, and can be seen as an alternative of rxjs. Here is an example to compare both libraries:
+The library `redux-saga` makes great use of this fact, and allows to produce data \(one or many\) asynchronously as well, and can be seen as an alternative of RxJS. Here is an example to compare both libraries:
 
+```typescript
+// RxJS
+const observable = fromEvent(el, 'keyup')
+  .map((e) => e.target.value)
+  .filter((it) => it != null)
+  .throttle(500)
+  .distinctUntilChanged()
+  .flatMapLatest((it) => fetch(`/autocomplete/${it}`))
+  .flatMap(x => x.json());
 
+// redux-saga  
+function* watchKeyUp() {
+  let last = null;
+  while (true) {
+    const event = yield take(keyupChannel);
+    const value = 
+    if (value != null) continue; // filter
+    if (value === last) continue; // distinctUntilChanged
+    last = value;
+    const response = yield fetch(`/autocomplete/${value}`).then(it => it.json())
+    yield put(autocompleteAction.success(response));
+    yield delay(500); // throttle
+  }
+}
+```
+
+Both libraries make it easy to solve hard concurrency problems. Both have their place and value, and the operators that rxjs ships can also be implemented using generators or async generators. However, the beauty of generators is that you can fallback to just using the language primitives such as a while loop, to solve those problems, without having to learn a big API like RxJS.
 
