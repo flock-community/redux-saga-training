@@ -131,6 +131,7 @@ function* watchKeyUp() {
     yield delay(500); // throttle
   }
 }
+
 ```
 
 Both libraries make it easy to solve hard concurrency problems. Both have their place and value, and the operators that rxjs ships can also be implemented using generators or async generators. However, the beauty of generators is that you can fallback to just using the language primitives such as a while loop, to solve those problems, without having to learn a big API like RxJS.
