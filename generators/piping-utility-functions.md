@@ -1,6 +1,6 @@
 # Piping utility functions
 
-One problem with generators in javascript is that it often leads to code like this:
+One problem with generators in javascript is that it can leads to code like this:
 
 ```javascript
 takeWhile(
