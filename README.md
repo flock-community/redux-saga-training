@@ -9,7 +9,7 @@ You can do those exercises in your own editor.
 ```bash
 # clone
 mkdir -p ~/code/training && cd ~/code/training
-git clone https://github.com/flock-community/redux-saga-exercises && redux-saga-exercises
+git clone https://github.com/flock-community/redux-saga-exercises && cd redux-saga-exercises
 
 # install deps
 npm i
@@ -18,11 +18,8 @@ npm i
 Solve the exercises one-by-one until all the tests are green. You can trigger a test run by:
 
 ```bash
-# all tests
-npx jest
-
 # interactive watch mode on changed files
-npx jest --watch
+npm test
 ```
 
 There are also shared run configuration included in the repo for Jetbrain editors.
