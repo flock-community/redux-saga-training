@@ -12,15 +12,21 @@
 * [A generator is an Iterator](generators/a-generator-is-an-iterator.md)
 * [A generator is an Iterable](generators/untitled.md)
 * [Infinite sequences](generators/infinite-sequences.md)
+* [Piping utility functions](generators/piping-utility-functions.md)
 
 ## Non-blocking generators
 
 * [Awaiting promises](non-blocking-generators/awaiting-promises.md)
+* [Canceling generators](non-blocking-generators/canceling-generators.md)
+* [Return terminates the generator](non-blocking-generators/return-terminates-the-generator.md)
+* [Preventing termination](non-blocking-generators/preventing-termination.md)
+* [Throw signals an error](non-blocking-generators/throw-signals-an-error.md)
+
+## Generators as Observers <a id="generators-as-observables"></a>
+
+* [Untitled](untitled.md)
 
 ## Iterables <a id="iterable"></a>
 
 * [The for ... of loop](iterable/1.for-of-loop.md)
-* [Iterator](iterable/2.iterator.md)
-* [Writing a custom Iterable](iterable/3.writing-a-custom-iterable.md)
-* [Advanced iterators](iterable/4.advanced-iterators.md)
 

@@ -1,6 +1,6 @@
 # Awaiting promises
 
-In the last section we saw how generators can be used to produce _many_ values _asynchronous_. However, redux-saga uses generators not only produce many values. In redux the saga the values that a generator produces are called _effects._ Those effects instructs the caller how to perform side effects \(such as making a http request\). 
+In the last section we saw how generators can be used to produce _many_ values _synchronously_. However, redux-saga uses generators to not only produce _many_ values, but also to pause the generator function on certain values. In redux the saga the values that a generator produces are called _effects._ Those effects instructs the caller how to perform side effects and for how long to pause the generator function \(such as when making a http request\). 
 
 When you can call a generator object with next, you effectively say, execute the generator function until the first `yield` and then pause the generator function until instructed to resume and execute until the next `yield`.
 
@@ -53,7 +53,7 @@ However, for a unit test, we can still run this code synchronously, if we prefer
 [1, 5, 10]
 ```
 
-Redux saga uses this pattern to its advantage. By inverting the control, it allows generators te be implemented as _pure_ functions. 
+Redux saga uses this pattern to its advantage. By inverting the control, it allows generators te be implemented as _pure_ functions.
 
 {% hint style="info" %}
 A pure function is a function that has no side effects and `returns` the same value when given the same parameters. For generators, this means that it `yield` the same values, given the same parameters.
@@ -108,4 +108,22 @@ function runGenerator(genFunc) {
 ```
 {% endtab %}
 {% endtabs %}
+
+Async functions can actually achieve this behaviour out of the box. 
+
+```javascript
+async function generatorFn() {
+  console.log('first part of function executed');
+  await delay(100)
+  console.log('second part of function executed');
+  await delay(500)
+  console.log('third part of function executed');
+  await delay(1000);
+  console.log('last part of function executed');
+}
+
+await generatorFn();
+```
+
+But redux-saga prefers generator's because it allows for the inversion of control explained above.
 
