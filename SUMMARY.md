@@ -2,6 +2,10 @@
 
 * [Redux Saga Training](README.md)
 
+## Introduction
+
+* [The 4 different kind of functions](introduction/the-4-different-kind-of-functions.md)
+
 ## Iterables <a id="iterable"></a>
 
 * [The for ... of loop](iterable/1.for-of-loop.md)
