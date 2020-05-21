@@ -6,11 +6,12 @@
 
 * [The 4 different kind of functions](introduction/the-4-different-kind-of-functions.md)
 
-## Generators
+## Generators as Iterators <a id="generators"></a>
 
 * [The generator function](generators/1.the-generator-function.md)
 * [A generator is an Iterator](generators/a-generator-is-an-iterator.md)
 * [A generator is an Iterable](generators/untitled.md)
+* [Infinite sequences](generators/infinite-sequences.md)
 
 ## Iterables <a id="iterable"></a>
 

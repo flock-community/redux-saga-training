@@ -70,7 +70,7 @@ Other important language constructs that can be used with Iterable are _spreadin
 ```
 
 {% tabs %}
-{% tab title="TS" %}
+{% tab title="Exercise 3" %}
 Use the spreading operator to ****capitalize a string.
 
 ```typescript
@@ -78,7 +78,7 @@ function capitalize(iterable: Iterable<string>) {
   // implement
 }
 
-test('Exercise 2', () => {
+test('Exercise 3', () => {
   expect(capitalize('hello')).toEqual('Hello');
   expect(capitalize('hello world')).toEqual('Hello world');
   expect(capitalize(['H', 'e', 'l', 'l', 'o'])).toEqual('Hello');
@@ -103,4 +103,6 @@ test('Exercise 3', () => {
 ```
 {% endtab %}
 {% endtabs %}
+
+
 
