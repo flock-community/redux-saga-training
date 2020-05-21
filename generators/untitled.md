@@ -90,7 +90,7 @@ test('Exercise 2', () => {
 
 {% tab title="Solution TS" %}
 ```typescript
-function capitalize(...: Iterable<string>) {
+function capitalize([first, ...rest]: Iterable<string>) {
   return first.toUpperCase() + rest.join('');
 }
 
