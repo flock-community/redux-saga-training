@@ -6,7 +6,7 @@ Calling a generator function will give you a generator object.
 const generator: Generator<number> = range(0, 100, 25);
 ```
 
-The generator type implements the `Iterator` interface:
+The `Generator` type implements the `Iterator` interface:
 
 ```typescript
 interface Iterator<T> {
@@ -22,8 +22,10 @@ const generator = range(0, 50, 25);
 {value: 0, done: false}
 > generator.next()
 {value: 25, done: false}
-> > generator.next()
-{value: 50, done: true}
+> generator.next()
+{value: 50, done: false}
+> generator.next()
+{value: undefined, done: true}
 ```
 
 {% tabs %}

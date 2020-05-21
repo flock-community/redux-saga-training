@@ -10,7 +10,7 @@
 
 * [The generator function](generators/1.the-generator-function.md)
 * [A generator is an Iterator](generators/a-generator-is-an-iterator.md)
-* [Untitled](generators/untitled.md)
+* [A generator is an Iterable](generators/untitled.md)
 
 ## Iterables <a id="iterable"></a>
 
