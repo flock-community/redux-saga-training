@@ -13,6 +13,10 @@
 * [A generator is an Iterable](generators/untitled.md)
 * [Infinite sequences](generators/infinite-sequences.md)
 
+## Non-blocking generators
+
+* [Awaiting promises](non-blocking-generators/awaiting-promises.md)
+
 ## Iterables <a id="iterable"></a>
 
 * [The for ... of loop](iterable/1.for-of-loop.md)

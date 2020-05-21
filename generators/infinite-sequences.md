@@ -41,7 +41,7 @@ function* take<T>(iterable: Iterable<T>, n: number) {
 
 {% tabs %}
 {% tab title="Exercise 4" %}
-Implement the following takeWhile function:
+Implement the following `takeWhile` function:
 
 ```typescript
 function* takeWhile<T>(iterable: Iterable<T>, predicate: (t: T) => boolean) {
@@ -73,5 +73,71 @@ function* takeWhile<T>(iterable: Iterable<T>, predicate: (t: T) => boolean) {
 {% endtab %}
 {% endtabs %}
 
-Make a function `takeWhile`
+{% tabs %}
+{% tab title="Exercise 5" %}
+Implement the primes using a generator function.  
+  
+Tip: use a helper function isPrime, otherwise you would need to use loop labels.
+
+```typescript
+function* primes(): Generator<number> {
+  // implement
+}
+
+function isPrime(p: number): boolean {
+  // implement
+}
+
+test('Exercise 5', () => {
+  expect([...takeWhile(primes(), (i) => i < 100)]).toStrictEqual([
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+  ]);
+});
+
+```
+{% endtab %}
+
+{% tab title="Solution" %}
+```typescript
+function* primes() {
+  for (const p of naturals(2)) {
+    if (isPrime(p)) yield p;
+  }
+}
+
+function isPrime(p: number) {
+  for (const n of takeWhile(naturals(2), (n) => n < p)) {
+    if (p % n === 0) return false;
+  }
+  return true;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
 
