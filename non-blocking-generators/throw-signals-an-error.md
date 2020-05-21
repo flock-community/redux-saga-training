@@ -29,3 +29,51 @@ Caught: Error: Problem!
 
 The result of `throw()` \(shown in the last line\) stems from us leaving the function with an implicit `return`.
 
+{% tabs %}
+{% tab title="Exercise" %}
+When executing promises, while running a generator errors can be thrown. We can propagate those errors now back to the generator. 
+
+```javascript
+function runGenerator(genFunc) {
+  const genObj = genFunc();
+  step(genObj.next());
+
+  function step({ value, done }) {
+    if (!done) {
+      value
+        .then(() => {
+          step(genObj.next());
+        })
+        // implement propogating errors
+    }
+  }
+}
+
+```
+{% endtab %}
+
+{% tab title="Solution" %}
+```javascript
+function runGenerator(genFunc) {
+  const genObj = genFunc();
+  step(genObj.next());
+
+  function step({ value, done }) {
+    if (!done) {
+      value
+        .then(() => {
+          step(genObj.next());
+        })
+        .catch((error) => {
+          step(genObj.throw(error));
+        });
+    }
+  }
+}
+
+```
+{% endtab %}
+{% endtabs %}
+
+
+

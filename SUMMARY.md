@@ -24,9 +24,10 @@
 
 ## Generators as Observers <a id="generators-as-observables"></a>
 
-* [Untitled](untitled.md)
+* [Generators as observers](generators-as-observers.md)
+* [Generators as shallow coroutines](generators-as-shallow-coroutines.md)
 
-## Iterables <a id="iterable"></a>
+## Old <a id="iterable"></a>
 
 * [The for ... of loop](iterable/1.for-of-loop.md)
 
