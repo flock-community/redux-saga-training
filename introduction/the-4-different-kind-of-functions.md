@@ -101,7 +101,7 @@ You could say that it took javascript 10 days to ship the first kind of function
 | **Synchronous** | function\(...args\): E | function\*\(...args\): Generator&lt;E&gt; |
 | **Asynchronous** | async function\(...args\): Promise&lt;E&gt; | async function\*\(...args\): Generator&lt;E&gt; |
 
-You could say that the generator function is best suited for producing many things synchronously, and could be seen as an alternative of arrays which are not stored in memory and produced lazily, which allows it to represent an infinite amount of data while respecting the finite physical reality.
+The generator function is best suited for producing many things synchronously, and can be seen as an alternative of arrays which are not stored in memory and produced lazily, which allows it to represent an infinite amount of data while respecting the finite physical reality.
 
 However, because the caller of a the generator function decides when to get data out of a generator, it can effectively pause and resume the generator, and decide to schedule those tasks later in time. In this way, it mimics both the functionality of asynchronous function as well as an asynchronous generator function. In fact, you could say that those 2 kind of functions are restricted versions of the generator function. A generator is less easy to use, but allows for more control of the caller of the generator, which can be seen of _inversion of control_. Not the function determines how long the function get paused, or how much data is produced, but the caller is in control of that. 
 
