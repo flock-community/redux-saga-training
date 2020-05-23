@@ -99,7 +99,7 @@ You could say that it took javascript 10 days to ship the first kind of function
 |  | One&lt;E&gt; | Many&lt;E&gt; |
 | :--- | :--- | :--- |
 | **Synchronous** | function\(...args\): E | function\*\(...args\): Generator&lt;E&gt; |
-| **Asynchronous** | async function\(...args\): Promise&lt;E&gt; | async function\*\(...args\): Generator&lt;E&gt; |
+| **Asynchronous** | async function\(...args\): Promise&lt;E&gt; | async function\*\(...args\): AsyncGenerator&lt;E&gt; |
 
 The generator function is best suited for producing many things synchronously, and can be seen as an alternative of arrays which are not stored in memory and produced lazily, which allows it to represent an infinite amount of data while respecting the finite physical reality.
 
