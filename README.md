@@ -15,6 +15,15 @@ git clone https://github.com/flock-community/redux-saga-exercises && cd redux-sa
 npm i
 ```
 
+```bash
+# clone
+mkdir -p ~/code/training && cd ~/code/training
+git clone https://github.com/flock-community/redux-saga-exercises && cd redux-saga-exercises
+
+# install deps
+npm i
+```
+
 Solve the exercises one-by-one until all the tests are green. You can trigger a test run by:
 
 ```bash
