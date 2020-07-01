@@ -1,4 +1,4 @@
-# Redux Saga Training
+# Generators
 
 ![A Flock. Community Training](.gitbook/assets/image%20%282%29.png)
 

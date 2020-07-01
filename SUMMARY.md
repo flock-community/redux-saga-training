@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Redux Saga Training](README.md)
+* [Generators](README.md)
 
 ## Introduction
 
@@ -23,6 +23,8 @@
 * [Throw signals an error](non-blocking-generators/throw-signals-an-error.md)
 
 ## Generators as Observers <a id="generators-as-observables"></a>
+
+---
 
 * [Generators as observers](generators-as-observers.md)
 * [Generators as shallow coroutines](generators-as-shallow-coroutines.md)
